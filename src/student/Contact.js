@@ -8,7 +8,6 @@ export default function ContactUs() {
     email: '',
     message: ''
   });
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -16,12 +15,18 @@ export default function ContactUs() {
       [name]: value
     });
   };
-  const submit = () =>{
-    window.alert("Query submitted successfully!")
-  }
+
+  //  const submit = () =>{
+  //    window.alert("Query submitted successfully!");
+  //  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    window.alert("Form submitted successfully!")
+    if (!formData.name || !formData.email || !formData.message) {
+      window.alert("Please enter all the details");
+      return;
+    }
     console.log('Form submitted:', formData);
 
     setFormData({
@@ -49,7 +54,7 @@ export default function ContactUs() {
           <label htmlFor="message">Message:</label>
           <textarea id="message" name="message" value={formData.message} onChange={handleChange} required></textarea>
         </div>
-        <button type="submit" onClick={submit}>Submit</button>
+        <button type="submit" style={{ backgroundColor: 'green', color: 'white', padding: '10px', border: 'none', borderRadius: '5px' }} >Submit</button>
       </form>
     </div>
   );

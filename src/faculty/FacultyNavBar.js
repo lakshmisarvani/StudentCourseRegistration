@@ -10,7 +10,7 @@ import Courses from './Courses';
 import Profile from './Profile';
 
 const FacultyNavBar = () => {
-  document.body.style.backgroundColor = "beige";
+  // document.body.style.backgroundColor = "beige";
   return (
     <div>
       <h3 style={{marginTop:'-100px'}}>FACULTY HUB</h3>

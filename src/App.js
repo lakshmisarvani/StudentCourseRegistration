@@ -27,10 +27,10 @@ import RemoveCourse from "./admin/courses/RemoveCourse";
 import ChangePassword from "./faculty/ChangePassword";
 import StudentLogin from "./student/StudentLogin";
 import StudentNavBar from "./student/StudentNavBar";
-import CourseRegistration from "./student/CourseRegistration";
 import ViewCourses from "./student/ViewCourses";
 import ProfileCard from "./student/profilecard/ProfileCard";
 import ContactUs from "./student/Contact";
+import OptionForm from "./student/OptionForm";
 
 
 // import Faculty from "./admin/faculty/Faculty";
@@ -47,7 +47,7 @@ function App() {
           <Route path="/studentnavbar/*" element={<StudentNavBar/>}/>
           <Route path="/adminlogin/*" element={<AdminLogin/>}/>
 
-
+          <Route path="/optionform/*" element={<OptionForm/>}/>
           <Route path="/courses/*" element={<Courses/>}/>
           <Route path="/students/*" element={<Students/>}/>
           <Route path="/contact/*" element={<Contact/>}/>
@@ -66,7 +66,6 @@ function App() {
         <Route path='/viewcourse/*' element={<ViewCourse />} />
         <Route path='/removecourse/*' element={<RemoveCourse />} />
 
-        <Route path="/courseregistration/*" element={<CourseRegistration/>} exact />
           <Route path="/viewcourses/*" element={<ViewCourses />} exact />
           <Route path="/profilecard/*" element={<ProfileCard/>}exact/>
           <Route path="/contactus/*" element={<ContactUs/>}exact/>

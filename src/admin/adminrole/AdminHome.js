@@ -12,7 +12,7 @@ export default function AdminHome()
   const navigation2=()=>{
     navigate("/faculty")
   }
-  document.body.style.backgroundColor = "beige";
+  // document.body.style.backgroundColor = "beige";
   return (
     <div >
       <NavBar/>

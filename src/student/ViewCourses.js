@@ -1,42 +1,43 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import StudentNavBar from './StudentNavBar';
 import config from '../Config';
-export default function ViewCourses() {
+import StudentNavBar from './StudentNavBar';
 
-  const [courses, setCourses] = useState([]);
-
-  const fetchcourses = async () => {
-    try {
-      const response = await axios.get( `${config.url}/viewcourses`);
-      setCourses(response.data);
-    } catch (error) {
-      console.error(error.message);
-    }
-  }
+export default function CoursesView() {
+    
+      const [courses, setCourses] = useState([]);
+    
+      const fetchcourses = async () => {
+        try {
+          const response = await axios.get( `${config.url}/viewcourses`);
+          setCourses(response.data);
+        } catch (error) {
+          console.error(error.message);
+        }
+      }
+      
   useEffect(() => {
     fetchcourses();
   }, []);
   
-  // const deletecourses = async (code) => {
-  //   try {
-  //     await axios.delete(`http://localhost:3222/deletecourse/${code}`);
-  //     fetchcourses();
-  //   } catch (error) {
-  //     console.error(error.message);
-  //   }
-  // }
+//   const viewcourse = async (email) => {
+//     try {
+//       await axios.get(`${config.url}/removestudents/${email}`);
+//       fetchcourses();
+//     } catch (error) {
+//       console.error(error.message);
+//     }
+//   }
   return (
       <div style={{ textAlign: 'center' }}>
         <StudentNavBar/>
-         <h1 style={{marginTop:"-200px"}}>Course Details </h1><br/> 
+        <h1 style={{marginTop:"-250px"}} >Course Details </h1>
         
         <table border={1} align="center" style={{ width: 'auto', height: 'auto' }}>
             <thead>
               <tr>
                 <th>Course Name</th>
                 <th>Course Code </th>
-                <th>Action </th>
                 
               </tr>
             </thead>
@@ -46,14 +47,13 @@ export default function ViewCourses() {
         <tr key={index}>
           <td>{course.name}</td>
           <td>{course.code}</td>
-          {/* <td>
-          <button onClick={() => deletecourses(course.code)} className='button'>Delete</button>
-        </td> */}
+          
+          
         </tr>
       ))
     ) : (
       <tr>
-        <td colSpan="4">Data Not Found</td>
+        <td colSpan="2">Data Not Found</td>
       </tr>
     )}
   </tbody>
@@ -61,4 +61,4 @@ export default function ViewCourses() {
       </div>
   )
 }
-/*RemoveCourse*/
+/*View Course*/
