@@ -6,7 +6,7 @@ import FacultyLogin from "./faculty/FacultyLogin";
 import FacultyNavBar from "./faculty/FacultyNavBar";
 import MainPage from "./main/MainPage";
 import { BrowserRouter as Router } from "react-router-dom";
-import {Routes,Route,Link} from "react-router-dom"
+import {Routes,Route} from "react-router-dom"
 import Students from "./faculty/Students";
 import Courses from "./faculty/Courses";
 import Contact from "./faculty/Contact";
@@ -40,43 +40,39 @@ function App() {
        <Router>
         <Routes>
         <Route path="/" element={<MainPage />} />
-          <Route path="/studentlogin" element={<StudentLogin />} />
-          <Route path="/facultylogin" element={<FacultyLogin />} /> 
-          <Route path="/facultynavbar" element={<FacultyNavBar />} />
-          <Route path="/adminnavbar" element={<NavBar/>}/>
-          <Route path="/studentnavbar" element={<StudentNavBar/>}/>
-          <Route path="/adminlogin" element={<AdminLogin/>}/>
+          <Route path="/studentlogin/*" element={<StudentLogin />} />
+          <Route path="/facultylogin/*" element={<FacultyLogin />} /> 
+          <Route path="/facultynavbar/*" element={<FacultyNavBar />} />
+          <Route path="/adminnavbar/*" element={<NavBar/>}/>
+          <Route path="/studentnavbar/*" element={<StudentNavBar/>}/>
+          <Route path="/adminlogin/*" element={<AdminLogin/>}/>
 
 
-          <Route path="/courses" element={<Courses/>}/>
-          <Route path="/students" element={<Students/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/profile" element={<Profile/>}/>
-          <Route path="/adminhome" element={<AdminHome />} />
-        <Route path="/addstudent" element={<AddStudent />} />
-        <Route path="/viewstudents" element={<ViewStudents/>} />
-        <Route path="/removestudent" element={<DeleteStudent />} />
-        <Route path='/addfaculty' element={<AddFaculty />} />
-        <Route path='/viewfaculty' element={<ViewFaculty />} />
-        <Route path='/removefaculty' element={<RemoveFaculty />} />
-        <Route path='/changepwd' element={<ChangePassword/>}/>
+          <Route path="/courses/*" element={<Courses/>}/>
+          <Route path="/students/*" element={<Students/>}/>
+          <Route path="/contact/*" element={<Contact/>}/>
+          <Route path="/about/*" element={<About/>}/>
+          <Route path="/profile/*" element={<Profile/>}/>
+          <Route path="/adminhome/*" element={<AdminHome />} />
+        <Route path="/addstudent/*" element={<AddStudent />} />
+        <Route path="/viewstudents/*" element={<ViewStudents/>} />
+        <Route path="/removestudent/*" element={<DeleteStudent />} />
+        <Route path='/addfaculty/*' element={<AddFaculty />} />
+        <Route path='/viewfaculty/*' element={<ViewFaculty />} />
+        <Route path='/removefaculty/*' element={<RemoveFaculty />} />
+        <Route path='/changepwd/*' element={<ChangePassword/>}/>
         {/*Course routes */}
-        <Route path='/addcourse' element={<AddCourse />} />
-        <Route path='/viewcourse' element={<ViewCourse />} />
-        <Route path='/removecourse' element={<RemoveCourse />} />
+        <Route path='/addcourse/*' element={<AddCourse />} />
+        <Route path='/viewcourse/*' element={<ViewCourse />} />
+        <Route path='/removecourse/*' element={<RemoveCourse />} />
 
-        <Route path="/courseregistration" element={<CourseRegistration/>} exact />
-          <Route path="/viewcourses" element={<ViewCourses />} exact />
-          <Route path="/profilecard" element={<ProfileCard/>}exact/>
-          <Route path="/contactus" element={<ContactUs/>}exact/>
+        <Route path="/courseregistration/*" element={<CourseRegistration/>} exact />
+          <Route path="/viewcourses/*" element={<ViewCourses />} exact />
+          <Route path="/profilecard/*" element={<ProfileCard/>}exact/>
+          <Route path="/contactus/*" element={<ContactUs/>}exact/>
 
         </Routes> 
-        {/* <StudentNavBar/> 
-        <MainPage/>
-        <NavBar/>*/}
-        {/* <Courses/> */}
-       {/* <Faculty/> */}
+        
       </Router>
     
     </div>

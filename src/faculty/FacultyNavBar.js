@@ -8,7 +8,6 @@ import About from './About';
 import Contact from './Contact';
 import Courses from './Courses';
 import Profile from './Profile';
-import navigate from 'react'
 
 const FacultyNavBar = () => {
   document.body.style.backgroundColor = "beige";
@@ -47,11 +46,11 @@ const FacultyNavBar = () => {
       </nav>
 
       <Routes>
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/students" element={<Students />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/courses/*" element={<Courses />} />
+        <Route path="/students/*" element={<Students />} />
+        <Route path="/about/*" element={<About />} />
+        <Route path="/contact/*" element={<Contact />} />
+        <Route path="/profile/*" element={<Profile/>}/>
       </Routes>
       {/* <img src={facultyImage} alt="Faculty" style={{ borderRadius: '50',position:'fixed',top:60, left: 750, marginTop:"50px" ,height: '60%', width:'55%' }} /> */}
     </div>

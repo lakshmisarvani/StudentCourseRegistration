@@ -19,9 +19,9 @@ export default function Student()
       </ul>
       
         <Routes>
-        <Route path="/addstudent" element={<AddStudent/>}/>
-       <Route path="/removestudent" element={<DeleteStudent/>}/>
-       <Route path="/viewstudents" element={<ViewStudents/>}/>
+        <Route path="/addstudent/*" element={<AddStudent/>}/>
+       <Route path="/removestudent/*" element={<DeleteStudent/>}/>
+       <Route path="/viewstudents/*" element={<ViewStudents/>}/>
         </Routes>
         
         </body>

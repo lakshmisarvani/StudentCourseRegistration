@@ -18,15 +18,6 @@ export default function Students()
   useEffect(() => {
     fetchstudents();
   }, []);
-  
-  const viewstudent = async (email) => {
-    try {
-      await axios.get(`${config.url}/deletestudent/${email}`);
-      fetchstudents();
-    } catch (error) {
-      console.error(error.message);
-    }
-  }
   return (
     
       <div style={{ textAlign: 'center' }}>

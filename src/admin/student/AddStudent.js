@@ -1,6 +1,5 @@
 import React,  { useState } from 'react'
 import '../adminrole/navbar.css'
-import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import config from '../../Config'
 import NavBar from '../adminrole/NavBar';

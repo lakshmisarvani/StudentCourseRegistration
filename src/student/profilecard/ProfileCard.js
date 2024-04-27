@@ -13,7 +13,7 @@ export default function ProfileCard()
         <h2>NAME : Student</h2>
         <h2>BRANCH : CSE(H) </h2>
         <h2>YEAR : 2</h2>
-        <email>220003xxxx@kluniversity.in</email>
+        <h1>Email: 220003xxxx@kluniversity.in</h1>
     </div>
 }
 
