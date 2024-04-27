@@ -5,7 +5,6 @@ import NavBar from '../adminrole/NavBar';
 
 export default function ViewCourse() {
   const [courses, setCourses] = useState([]);
-
   const fetchcourses = async () => {
     try {
       const response = await axios.get(`${config.url}/viewcourses`);
@@ -17,15 +16,6 @@ export default function ViewCourse() {
   useEffect(() => {
     fetchcourses();
   }, []);
-  
-  const viewcourse = async (email) => {
-    try {
-      await axios.get(`${config.url}/removestudents/${email}`);
-      fetchcourses();
-    } catch (error) {
-      console.error(error.message);
-    }
-  }
   return (
       <div style={{ textAlign: 'center' }}>
         <NavBar/>

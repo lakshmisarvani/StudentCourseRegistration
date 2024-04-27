@@ -1,6 +1,5 @@
 import React,{ useState } from 'react'
 import '../adminrole/navbar.css'
-import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import config from '../../Config'
 import NavBar from '../adminrole/NavBar'
@@ -14,11 +13,8 @@ export default function AddFaculty()
     designation: '',
     password:'',
   });
-  //message state variable
   const [message, setMessage] = useState('');
-  //error state variable
   const [error, setError] = useState('');
-
   const handleChange = (e) => 
   {
     setFormData({...formData, [e.target.id]: e.target.value});
@@ -41,12 +37,12 @@ export default function AddFaculty()
         });
       }
       setMessage(response.data);
-      setError('') // set error to ""
+      setError('')
     } 
     catch (error) 
     {
       setError(error.response.data);
-      setMessage(''); //set message to ""
+      setMessage('');
     }
   };
   

@@ -1,5 +1,5 @@
 import "./FacultyLogin.css";
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import { FaLock, FaUser } from 'react-icons/fa';
 import './FacultyLogin.png'
@@ -15,6 +15,7 @@ export default function FacultyLogin() {
 
     if (!validatePassword(password)) {
         window.alert("Password is very weak,change it as soon as possible")
+        setErrorMessage(true)
         navigate("/facultynavbar");
       return;
     }
@@ -32,7 +33,7 @@ export default function FacultyLogin() {
   return (
     <div className="wrapper-container">
       
-      <img src={require("./FacultyLogin.png")} alt="Background Image" />
+      <img src={require("./FacultyLogin.png")} alt="Background" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <div className="wrapper">
         <form className="form-content">

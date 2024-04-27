@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link,useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import FacultyNavBar from './FacultyNavBar';
 import changePasswordImage from './changepwd.jpeg'; // Import your change password image
 import logoutImage from './logout-vector-icon.jpg'; // Import your logout image
-import FacultyLogin from './FacultyLogin';
-import changepassword from './ChangePassword';
 
 export default function Profile() {
     const navigate = useNavigate();

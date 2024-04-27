@@ -19,14 +19,7 @@ export default function ViewFaculty()
     fetchfaculty();
   }, []);
   
-  const viewfaculty = async (email) => {
-    try {
-      await axios.get(`${config.url}/deletefaculty/${email}`);
-      fetchfaculty();
-    } catch (error) {
-      console.error(error.message);
-    }
-  }
+  
   return (
       <div style={{ textAlign: 'center' }}>
         <NavBar/>

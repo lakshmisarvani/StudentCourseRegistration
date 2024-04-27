@@ -9,7 +9,7 @@ export default function CourseRegistration()
 
   const fetchcourses = async () => {
     try {
-      const response = await axios.get(`${config.url}/viewcourses`);
+      const response = await axios.get(`${config.url}/viewstudent`);
       setCourses(response.data);
     } catch (error) {
       console.error(error.message);
@@ -18,15 +18,6 @@ export default function CourseRegistration()
   useEffect(() => {
     fetchcourses();
   }, []);
-  
-  const viewcourse = async (email) => {
-    try {
-      await axios.get(`${config.url}/removestudents/${email}`);
-      fetchcourses();
-    } catch (error) {
-      console.error(error.message);
-    }
-  }
   return (
       <div style={{ textAlign: 'center' }}>
         <StudentNavBar/>
