@@ -14,13 +14,13 @@ This frontend is supported by a dedicated backend service developed using the ME
 Repo link : 
 https://github.com/lakshmisarvani/backendapp/tree/master
 
-🛠️ Backend Features
-Developed with Node.js and Express.js
-MongoDB used as the primary database
+🛠️ Backend Features : 
+Developed with Node.js and Express.js, 
+MongoDB used as the primary database.
 
-RESTful API endpoints for:
-Student registration and authentication
-Course management (create, update, delete, list)
-Course enrollment and withdrawal
+RESTful API endpoints for : 
+Student registration and authentication, 
+Course management (create, update, delete, list), 
+Course enrollment and withdrawal, 
 Implements middleware for authentication using JWT
 Handles input validation and error responses
