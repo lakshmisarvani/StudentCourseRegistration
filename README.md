@@ -10,7 +10,7 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
-This frontend is supported by a dedicated backend service developed using the MERN stack (MongoDB, Express.js, React, Node.js).
+This frontend is supported by a dedicated backend service developed using the MERN stack (MongoDB, Express.js, React, Node.js).\
 Repo link : 
 https://github.com/lakshmisarvani/backendapp/tree/master
 
